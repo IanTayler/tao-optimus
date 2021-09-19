@@ -33,8 +33,13 @@ class Armijo(LRMethod):
         objective_function: ObjectiveFunction,
     ) -> float:
         lr = self.initial_lr
-        while function_value - objective_function(
-            parameters - lr * direction
-        ) >= -self.tolerance * lr * np.dot(gradient, direction):
+
+        def new_value(lr):
+            return function_value - objective_function(parameters - lr * direction)
+
+        def desired_value(lr):
+            return self.tolerance * lr * np.dot(gradient, direction)
+
+        while new_value(lr) < desired_value(lr):
             lr *= self.decrease_factor
         return lr

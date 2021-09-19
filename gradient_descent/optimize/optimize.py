@@ -14,7 +14,7 @@ def optimize(
 ) -> np.ndarray:
     step = 0
     parameters = initial_parameters
-    while max_steps < max_steps:
+    while step < max_steps:
         function_value = function(parameters)
         gradient = function.gradient(parameters)
         direction = direction_method(parameters, function)
