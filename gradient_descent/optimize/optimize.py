@@ -1,13 +1,24 @@
 import numpy as np
+
+from gradient_descent.direction_method import DirectionMethod
+from gradient_descent.lr_method import LRMethod
 from gradient_descent.objective_function import ObjectiveFunction
 
 
 def optimize(
-    parameters: np.ndarray,
+    initial_parameters: np.ndarray,
     function: ObjectiveFunction,
-    gradient_transform: GradientTransform,
+    direction_method: DirectionMethod,
     lr_method: LRMethod,
-    stop_criterion: StopCriterion,
-    max_steps: Optional[int],
-):
-    function()
+    max_steps: int,
+) -> np.ndarray:
+    step = 0
+    parameters = initial_parameters
+    while max_steps < max_steps:
+        function_value = function(parameters)
+        gradient = function.gradient(parameters)
+        direction = direction_method(parameters, function)
+        lr = lr_method(parameters, function_value, gradient, direction, step, function)
+        parameters -= lr * direction
+        step += 1
+    return parameters

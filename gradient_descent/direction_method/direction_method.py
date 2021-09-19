@@ -11,5 +11,7 @@ class DirectionMethod(ABC):
     Used for findig in which direction to take a step."""
 
     @abstractmethod
-    def __call__(self, parameters: np.ndarray, objective_function: ObjectiveFunction):
+    def __call__(
+        self, parameters: np.ndarray, objective_function: ObjectiveFunction
+    ) -> np.ndarray:
         pass
