@@ -21,6 +21,8 @@ def optimize(
         if verbose:
             print(f"Step {step}.")
         function_value = function(parameters)
+        if verbose:
+            print(f"Function value {function_value}")
         gradient = function.gradient(parameters)
         gradient_norm = np.sqrt((gradient ** 2).sum())
         if verbose:
