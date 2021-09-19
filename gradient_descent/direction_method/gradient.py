@@ -1,7 +1,7 @@
 import numpy as np
-from objective_function.objective_function import ObjectiveFunction
 
 from gradient_descent.direction_method import DirectionMethod
+from gradient_descent.objective_function import ObjectiveFunction
 
 
 class Gradient(DirectionMethod):
