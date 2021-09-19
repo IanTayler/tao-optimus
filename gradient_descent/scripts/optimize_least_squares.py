@@ -21,7 +21,8 @@ def _main():
         objective_function,
         direction_method,
         lr_method,
-        max_steps=100,
+        max_steps=1000,
+        verbose=True,
     )
     print(
         f"Initial value: {initial_value}. Final value: {objective_function(params)}."
