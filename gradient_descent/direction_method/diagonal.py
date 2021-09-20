@@ -1,10 +1,13 @@
+"""Methods based on multiplying the gradient by a diagonal definite-positive matrix"""
 import numpy as np
 
 from gradient_descent.direction_method import DirectionMethod
 from gradient_descent.objective_function import ObjectiveFunction
 
 
-class Diagonal(DirectionMethod):
+class DiagonalQuasiHessian(DirectionMethod):
+    """Direction is gradient multiplied by an inverse diagonal-only Hessian."""
+
     def __call__(
         self, parameters: np.ndarray, objective_function: ObjectiveFunction
     ) -> np.ndarray:

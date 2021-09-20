@@ -1,3 +1,4 @@
+"""Base classes for direction methods."""
 from abc import ABC, abstractmethod
 
 import numpy as np

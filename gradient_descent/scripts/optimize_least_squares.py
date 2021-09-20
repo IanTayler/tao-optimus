@@ -11,7 +11,7 @@ from gradient_descent.objective_function import least_squares
 direction_methods = {
     "newton": newton.Newton,
     "gradient": gradient.Gradient,
-    "diagonal": diagonal.Diagonal,
+    "quasihessian": diagonal.DiagonalQuasiHessian,
 }
 lr_methods = {
     "armijo": lambda lr: armijo.Armijo(

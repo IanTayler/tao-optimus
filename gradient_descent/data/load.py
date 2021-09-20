@@ -1,3 +1,4 @@
+"""Utils for reading data from files."""
 import pickle
 
 import numpy as np

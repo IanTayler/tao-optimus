@@ -1,3 +1,4 @@
+"""Main optimization functions."""
 import numpy as np
 
 from gradient_descent.direction_method import DirectionMethod
@@ -15,6 +16,7 @@ def optimize(
     minimum_step_norm: float = 1e-3,
     verbose: bool = False,
 ) -> np.ndarray:
+    """Run a gradient-descent style algorithm until it converges or `max_steps` is reached."""
     step = 0
     parameters = initial_parameters
     while step < max_steps:

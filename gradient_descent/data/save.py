@@ -1,3 +1,4 @@
+"""Utils for writing data to files."""
 import numpy as np
 
 

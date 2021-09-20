@@ -1,3 +1,4 @@
+"""Base class implementations for objective functions."""
 from abc import ABC, abstractmethod
 
 import numpy as np
@@ -8,7 +9,8 @@ class ObjectiveFunction(ABC):
 
     Example:
 
-    ```
+    ```python
+    # This is an example for how to build your own ObjectiveFunction.
     class Identity(ObjectiveFunction):
 
         is_c2 = True

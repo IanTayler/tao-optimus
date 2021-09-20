@@ -1,3 +1,4 @@
+"""Ordinary least squares and related problems."""
 from typing import Optional
 
 import numpy as np
@@ -11,6 +12,10 @@ class LeastSquares(ObjectiveFunction):
     is_c2 = True
 
     def __init__(self, inputs: np.ndarray, targets: np.ndarray):
+        """Initialize a least squares problem.
+
+        `inputs` is `A` (i.e. the matrix of features), and targets is
+        `b` (i.e. the vector of observed values)."""
         self.inputs = inputs
         self.targets = targets
         self._cached_hessian: Optional[np.ndarray] = None

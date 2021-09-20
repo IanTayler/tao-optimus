@@ -1,3 +1,4 @@
+"""Armijo rule."""
 import numpy as np
 
 from gradient_descent.lr_method import LRMethod
