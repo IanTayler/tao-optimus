@@ -6,3 +6,8 @@ This module is organized assuming the gradient descent step is conceptualized as
 
 The methods for choosing a direction are implemented in `gradient_descent.direction_method`. Methods for finding how much to move are in `gradient_descent.lr_method`. Objective functions (i.e. the functions that can be optimized) are implemented under `gradient_descent.objective_function`. Finally, the optimization function that puts everything together is in `gradient_descent.optimize`.
 
+## Scripts
+
+For quickly running some of the optimization methods implemented, check `scripts/optimize_least_squares.py`.
+
+You should first download suitable data for inputs (A) and targets (b) and store them as separate files in `.asc` or `.npy` formats. Then you can check supported methods by running `poetry run python scripts/optimize_least_squares.py --help` from this directory.
