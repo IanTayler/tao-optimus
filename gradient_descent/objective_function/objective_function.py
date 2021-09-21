@@ -11,12 +11,12 @@ class ObjectiveFunction(ABC):
 
     ```python
     # This is an example for how to build your own ObjectiveFunction.
-    class Identity(ObjectiveFunction):
+    class Sum(ObjectiveFunction):
 
         is_c2 = True
 
         def __call__(self, parameters):
-            return parameters
+            return parameters.sum()
 
         def gradient(self, parameters):
             return np.ones_like(parameters)
@@ -44,10 +44,7 @@ class ObjectiveFunction(ABC):
         """Implementation of the gradient for the function."""
 
     def partial_second_derivative(
-        self,
-        parameters: np.ndarray,
-        first_variable: int,
-        second_variable: int,
+        self, parameters: np.ndarray, first_variable: int, second_variable: int,
     ) -> float:
         """Implementation of a single partial second derivative.
 
