@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Ian Tayler <iangtayler@gmail.com>"]
 packages = [
-  { include = "gradient_descent" },
+  { include = "optimus" },
 ]
 
 [tool.poetry.dependencies]

@@ -2,11 +2,11 @@
 import click
 import numpy as np
 
-from gradient_descent import optimize
-from gradient_descent.data import load, save
-from gradient_descent.direction_method import diagonal, gradient, newton
-from gradient_descent.lr_method import armijo, constant
-from gradient_descent.objective_function import least_squares
+from optimus import optimize
+from optimus.data import load, save
+from optimus.direction_method import diagonal, gradient, newton
+from optimus.lr_method import armijo, constant
+from optimus.objective_function import least_squares
 
 direction_methods = {
     "newton": newton.Newton,

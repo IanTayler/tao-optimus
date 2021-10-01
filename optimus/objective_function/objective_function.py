@@ -5,7 +5,7 @@ import numpy as np
 
 
 class ObjectiveFunction(ABC):
-    """Base class for functions to be optimized using gradient descent methods.
+    """Base class for functions to be optimized using iterative methods.
 
     Example:
 

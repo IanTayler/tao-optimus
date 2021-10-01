@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 import numpy as np
 
-from gradient_descent.objective_function import ObjectiveFunction
+from optimus.objective_function import ObjectiveFunction
 
 
 class DirectionMethod(ABC):

@@ -1,9 +1,9 @@
 """Main optimization functions."""
 import numpy as np
 
-from gradient_descent.direction_method import DirectionMethod
-from gradient_descent.lr_method import LRMethod
-from gradient_descent.objective_function import ObjectiveFunction
+from optimus.direction_method import DirectionMethod
+from optimus.lr_method import LRMethod
+from optimus.objective_function import ObjectiveFunction
 
 
 def optimize(

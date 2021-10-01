@@ -1,8 +1,8 @@
 """Armijo rule."""
 import numpy as np
 
-from gradient_descent.lr_method import LRMethod
-from gradient_descent.objective_function import ObjectiveFunction
+from optimus.lr_method import LRMethod
+from optimus.objective_function import ObjectiveFunction
 
 
 class Armijo(LRMethod):

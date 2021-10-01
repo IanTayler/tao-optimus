@@ -1,5 +1,5 @@
 """Constant learning rate."""
-from gradient_descent.lr_method import LRMethod
+from optimus.lr_method import LRMethod
 
 
 class Constant(LRMethod):

@@ -4,8 +4,8 @@
 
 This repository uses `poetry` for dependency handling. To install all dependencies run `poetry install`. Make sure you have python 3.9 installed.
 
-## Gradient descent
+## Optimus
 
-Manually implements gradient descent algorithms as a learning exercise. Go to the internal [README](/gradient_descent/README.md) for more information.
+Manually implements iterative optimization algorithms as a learning exercise. Go to the internal [README](/optimus/README.md) for more information.
 
-Also, you can run `poetry run pdoc gradient_descent` to get reference documentation of the `gradient_descent` library.
+Also, you can run `poetry run pdoc optimus` to get reference documentation of the `optimus` library.
