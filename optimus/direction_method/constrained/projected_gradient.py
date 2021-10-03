@@ -28,6 +28,7 @@ class Projected(DirectionMethod):
             objective_function(parameters),
             objective_function.gradient(parameters),
             internal_direction,
+            # TODO: Consider a better way of setting a step number here.
             step=1,
             objective_function=objective_function,
         )
