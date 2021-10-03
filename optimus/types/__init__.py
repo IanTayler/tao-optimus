@@ -2,4 +2,4 @@
 from .constraint import Constraint
 from .direction_method import DirectionMethod
 from .lr_method import LRMethod
-from .optimus_function import OptimusFunction
+from .function import Function

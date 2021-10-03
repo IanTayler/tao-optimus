@@ -2,14 +2,14 @@
 import numpy as np
 
 from optimus.types import DirectionMethod
-from optimus.types import OptimusFunction
+from optimus.types import Function
 
 
 class DiagonalQuasiHessian(DirectionMethod):
     """Direction is gradient multiplied by an inverse diagonal-only Hessian."""
 
     def __call__(
-        self, parameters: np.ndarray, objective_function: OptimusFunction
+        self, parameters: np.ndarray, objective_function: Function
     ) -> np.ndarray:
         gradient = objective_function.gradient(parameters)
         size = gradient.size

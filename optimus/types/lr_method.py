@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 import numpy as np
 
-from .optimus_function import OptimusFunction
+from .function import Function
 
 
 class LRMethod(ABC):
@@ -17,6 +17,6 @@ class LRMethod(ABC):
         gradient: np.ndarray,
         direction: np.ndarray,
         step: int,
-        objective_function: OptimusFunction,
+        objective_function: Function,
     ) -> float:
         pass

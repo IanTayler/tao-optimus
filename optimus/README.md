@@ -4,7 +4,7 @@ Several variations on iterative methods for optimization, implemented from scrat
 
 This module is organized assuming the optimization step is conceptualized as `x := x - lr * d`. So, taking a step amounts to choosing a direction in which to move, and an amount to move.
 
-The methods for choosing a direction are implemented in `optimus.direction_method`. Methods for finding how much to move are in `optimus.lr_method`. Objective functions (i.e. the functions that can be optimized) are implemented under `optimus.optimus_function`. These functions are also used to define constraints, and elsewhere where a differentiable function might be needed. Finally, the optimization function that puts everything together is in `optimus.optimize`.
+The methods for choosing a direction are implemented in `optimus.direction_method`. Methods for finding how much to move are in `optimus.lr_method`. Objective functions (i.e. the functions that can be optimized) are implemented under `optimus.function`. These functions are also used to define constraints, and elsewhere where a differentiable function might be needed. Finally, the optimization function that puts everything together is in `optimus.optimize`.
 
 ## Scripts
 

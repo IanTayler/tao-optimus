@@ -1,7 +1,7 @@
 """Move inside the feasible set by taking a GD step and then projecting."""
 import numpy as np
 
-from optimus.types import Constraint, DirectionMethod, LRMethod, OptimusFunction
+from optimus.types import Constraint, DirectionMethod, LRMethod, Function
 
 
 class Projected(DirectionMethod):
@@ -18,7 +18,7 @@ class Projected(DirectionMethod):
         self.constraint = constraint
 
     def __call__(
-        self, parameters: np.ndarray, objective_function: OptimusFunction
+        self, parameters: np.ndarray, objective_function: Function
     ) -> np.ndarray:
         internal_direction = self.internal_direction_method(
             parameters, objective_function

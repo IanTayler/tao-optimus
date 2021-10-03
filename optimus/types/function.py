@@ -4,14 +4,14 @@ from abc import ABC, abstractmethod
 import numpy as np
 
 
-class OptimusFunction(ABC):
+class Function(ABC):
     """Base class for functions to be optimized using iterative methods.
 
     Example:
 
     ```python
-    # This is an example for how to build your own OptimusFunction.
-    class Sum(OptimusFunction):
+    # This is an example for how to build your own Function.
+    class Sum(Function):
 
         is_c2 = True
 
@@ -60,7 +60,7 @@ class OptimusFunction(ABC):
 
         Note: this is optional. By default, raises NotImplementedError."""
         raise NotImplementedError(
-            f"OptimusFunction {self.__class__.__qualname__} does not"
+            f"Function {self.__class__.__qualname__} does not"
             " implement partial_second_derivative."
         )
 
@@ -81,7 +81,7 @@ class OptimusFunction(ABC):
                         )
                     except NotImplementedError:
                         raise NotImplementedError(
-                            f"OptimusFunction {self.__class__.__qualname__} does not"
+                            f"Function {self.__class__.__qualname__} does not"
                             " implement hessian nor partial_second_derivative."
                         )
         return returned_hessian

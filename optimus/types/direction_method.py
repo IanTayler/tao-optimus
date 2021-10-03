@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 import numpy as np
 
-from .optimus_function import OptimusFunction
+from .function import Function
 
 
 class DirectionMethod(ABC):
@@ -13,6 +13,6 @@ class DirectionMethod(ABC):
 
     @abstractmethod
     def __call__(
-        self, parameters: np.ndarray, objective_function: OptimusFunction
+        self, parameters: np.ndarray, objective_function: Function
     ) -> np.ndarray:
         pass
