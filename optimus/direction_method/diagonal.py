@@ -1,15 +1,15 @@
 """Methods based on multiplying the gradient by a diagonal definite-positive matrix"""
 import numpy as np
 
-from optimus.direction_method import DirectionMethod
-from optimus.objective_function import ObjectiveFunction
+from optimus.types import DirectionMethod
+from optimus.types import OptimusFunction
 
 
 class DiagonalQuasiHessian(DirectionMethod):
     """Direction is gradient multiplied by an inverse diagonal-only Hessian."""
 
     def __call__(
-        self, parameters: np.ndarray, objective_function: ObjectiveFunction
+        self, parameters: np.ndarray, objective_function: OptimusFunction
     ) -> np.ndarray:
         gradient = objective_function.gradient(parameters)
         size = gradient.size

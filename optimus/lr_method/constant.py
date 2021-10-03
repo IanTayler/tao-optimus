@@ -1,5 +1,5 @@
 """Constant learning rate."""
-from optimus.lr_method import LRMethod
+from optimus.types import LRMethod
 
 
 class Constant(LRMethod):

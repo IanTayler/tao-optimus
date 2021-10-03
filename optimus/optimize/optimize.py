@@ -1,14 +1,12 @@
 """Main optimization functions."""
 import numpy as np
 
-from optimus.direction_method import DirectionMethod
-from optimus.lr_method import LRMethod
-from optimus.objective_function import ObjectiveFunction
+from optimus.types import DirectionMethod, LRMethod, OptimusFunction
 
 
 def optimize(
     initial_parameters: np.ndarray,
-    function: ObjectiveFunction,
+    function: OptimusFunction,
     direction_method: DirectionMethod,
     lr_method: LRMethod,
     max_steps: int,

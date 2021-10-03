@@ -1,8 +1,7 @@
 """Armijo rule."""
 import numpy as np
 
-from optimus.lr_method import LRMethod
-from optimus.objective_function import ObjectiveFunction
+from optimus.types import LRMethod, OptimusFunction
 
 
 class Armijo(LRMethod):
@@ -31,7 +30,7 @@ class Armijo(LRMethod):
         gradient: np.ndarray,
         direction: np.ndarray,
         step: int,
-        objective_function: ObjectiveFunction,
+        objective_function: OptimusFunction,
     ) -> float:
         lr = self.initial_lr
 

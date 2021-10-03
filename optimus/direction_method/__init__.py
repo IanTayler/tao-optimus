@@ -6,4 +6,3 @@ be the _opposite_ of the actual step taken, as it's subtracted from the previous
 In order to implement a custom method for selecting a direction, inherit from
 `optimus.direction_method.DirectionMethod`.
 """
-from .direction_method import DirectionMethod

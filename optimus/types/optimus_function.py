@@ -4,14 +4,14 @@ from abc import ABC, abstractmethod
 import numpy as np
 
 
-class ObjectiveFunction(ABC):
+class OptimusFunction(ABC):
     """Base class for functions to be optimized using iterative methods.
 
     Example:
 
     ```python
-    # This is an example for how to build your own ObjectiveFunction.
-    class Sum(ObjectiveFunction):
+    # This is an example for how to build your own OptimusFunction.
+    class Sum(OptimusFunction):
 
         is_c2 = True
 
@@ -44,7 +44,10 @@ class ObjectiveFunction(ABC):
         """Implementation of the gradient for the function."""
 
     def partial_second_derivative(
-        self, parameters: np.ndarray, first_variable: int, second_variable: int,
+        self,
+        parameters: np.ndarray,
+        first_variable: int,
+        second_variable: int,
     ) -> float:
         """Implementation of a single partial second derivative.
 
@@ -57,7 +60,7 @@ class ObjectiveFunction(ABC):
 
         Note: this is optional. By default, raises NotImplementedError."""
         raise NotImplementedError(
-            f"ObjectiveFunction {self.__class__.__qualname__} does not"
+            f"OptimusFunction {self.__class__.__qualname__} does not"
             " implement partial_second_derivative."
         )
 
@@ -78,7 +81,7 @@ class ObjectiveFunction(ABC):
                         )
                     except NotImplementedError:
                         raise NotImplementedError(
-                            f"ObjectiveFunction {self.__class__.__qualname__} does not"
+                            f"OptimusFunction {self.__class__.__qualname__} does not"
                             " implement hessian nor partial_second_derivative."
                         )
         return returned_hessian

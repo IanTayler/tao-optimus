@@ -3,10 +3,10 @@ from typing import Optional
 
 import numpy as np
 
-from optimus.objective_function import ObjectiveFunction
+from optimus.types import OptimusFunction
 
 
-class LeastSquares(ObjectiveFunction):
+class LeastSquares(OptimusFunction):
     """Ordinary least squares of the form min ||Ax - b||^2."""
 
     is_c2 = True
