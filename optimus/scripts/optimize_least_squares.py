@@ -6,7 +6,7 @@ from optimus import optimize
 from optimus.data import load, save
 from optimus.direction_method import diagonal, gradient, newton
 from optimus.lr_method import armijo, constant
-from optimus.objective_function import least_squares
+from optimus.optimus_function import least_squares
 
 direction_methods = {
     "newton": newton.Newton,
