@@ -33,4 +33,5 @@ class Projected(DirectionMethod):
             objective_function=objective_function,
         )
         unprojected_new_point = parameters - internal_lr * internal_direction
-        return self.constraint.project(unprojected_new_point) - parameters
+        new_direction = parameters - self.constraint.project(unprojected_new_point)
+        return new_direction

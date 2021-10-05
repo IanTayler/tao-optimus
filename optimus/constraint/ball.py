@@ -17,4 +17,4 @@ class Ball(Constraint):
         distance = np.linalg.norm(difference_vector)
         if distance <= self.radius:
             return point
-        return point - (distance - self.radius) * difference_vector
+        return point - difference_vector * ((distance - self.radius) / distance)
