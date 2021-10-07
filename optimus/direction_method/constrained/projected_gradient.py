@@ -5,7 +5,9 @@ from optimus.types import Constraint, DirectionMethod, LRMethod, Function
 
 
 class Projected(DirectionMethod):
-    """Direction is some other method + projection to constraints."""
+    """Direction is some other method + projection to constraints.
+
+    Note: usually Projected should be used with LRMethod Constant(lr=1)."""
 
     def __init__(
         self,

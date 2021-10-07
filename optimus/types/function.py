@@ -53,10 +53,10 @@ class Function(ABC):
 
         This function should be interpreted as (d^2 f) / (dx[first_variable] dx[second_variable]).
 
-        In other words, this function is return how much the gradient at [second_variable] varies
+        In other words, this function returns how much the gradient at [second_variable] varies
         when we change the value at [first_value] a small amount, and not the other way around.
 
-        Not that if the function is C2, this is a moot point as both are identical.
+        Note that if the function is C2, this is a moot point as both are identical.
 
         Note: this is optional. By default, raises NotImplementedError."""
         raise NotImplementedError(
