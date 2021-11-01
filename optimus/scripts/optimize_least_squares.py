@@ -52,21 +52,29 @@ def _main(
     targets_path: str,
     output_path: str,
 ):
+    # Load data
     inputs = load.load_numpy(inputs_path)
     targets = load.load_numpy(targets_path)
+    # Build classes describing the details of the optimization problem and
+    # method.
     direction_method = direction_methods[direction_method_name]()
     lr_method = lr_methods[lr_method_name](lr)
     objective_function = least_squares.LeastSquares(inputs, targets)
+    # Initialize state.
     initial_params = np.random.normal(0.0, 1.0, inputs.shape[1])
     initial_value = objective_function(initial_params)
-    params = optimize.optimize(
+    params = initial_params
+    for step_info in optimize.optimize(
         initial_params,
         objective_function,
         direction_method,
         lr_method,
         max_steps=1000,
-        verbose=True,
-    )
+    ):
+        params = step_info.parameters
+        print(f"Step {step_info.step}.")
+        print(f"Function value {step_info.function_value}")
+        print(f"Gradient norm: {np.linalg.norm(step_info.gradient)}.")
     print(
         f"Initial value: {initial_value}. Final value: {objective_function(params)}."
         f"\nFinal params: {params}"
